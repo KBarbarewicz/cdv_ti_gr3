@@ -8,8 +8,19 @@
     <title>Skrypt</title>
 </head>
 <body>
+<h4>Początek strony</h4>
+<?php
+//require, require_once,include,include_once
 
+include "./scripts/list.php";
+@include_once "./scripts/list111.php";
 
+echo "<br>Require<br>";
+require "./scripts/list.php";
+require_once "./scripts/list.php";
+//@require "./scripts/list1111.php";
+?>
+<h4>Koniec strony</h4>
 
 
 </body>
