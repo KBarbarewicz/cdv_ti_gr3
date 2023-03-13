@@ -10,7 +10,23 @@
 <body>
 <?php
 require_once "./scripts/connect.php";
+$sql = "SELECT * FROM `users`;";
+$result = $conn->query($sql);
+//$user = $result->fetch_assoc();
+//echo $user["firstName"];
+while($user = $result->fetch_assoc()){
+    //echo "test<br>";
+    //print_r($user);//vardump dodatkowo dodaje jaki jest typ oraz pl znaki robi ray 2
+    //echo "<br>";
+    $year = substr($user["birthday"], 0, -6);
+    echo <<< USERS
+    Imię i nazwisko: $user[firstName] $user[lastName]<br>
+    Data urodzenia: $user[birthday]<br>
+    Rok urodzenia: $year<br>
+    <hr>
 
+USERS;
+}
 ?>
 
 </body>
