@@ -20,25 +20,24 @@
 		<li>Gniezno</li>
 		<li>Jarocin</li>
 	</ul>
-<?php
-$city = "Poznań";
-echo <<< LIST
-<hr>HEREDOC<br>
 
-<h4>Lista</h4>
-<ul>
-    <li>
-        $city
-        <ol type="A">
-            <li>Polna</li>
-            <li>Gnieźnieńska</li>
-        </ol>
-    </li>
-    <li>Gniezno</li>
-    <li>Jarocin</li>
-</ul>
+    <?php
+        $city = "Poznań";
+        echo <<< LIST
+            <hr>HEREDOC<br>
+            <ul>
+                <li>
+                    $city
+                    <ol type="A">
+                        <li>Polna</li>
+                        <li>Gnieźnieńska</li>
+                    </ol>
+                </li>
+                <li>Gniezno</li>
+                <li>Jarocin</li>
+	        </ul>
 LIST;
-?>
 
+    ?>
 </body>
 </html>
