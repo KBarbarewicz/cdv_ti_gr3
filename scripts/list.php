@@ -1,5 +1,2 @@
 <?php
-echo "Lista<hr>";
-
-
-?>
+	echo "Lista<hr>";
