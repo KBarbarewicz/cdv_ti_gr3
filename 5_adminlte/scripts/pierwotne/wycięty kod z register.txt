@@ -1,0 +1,22 @@
+//echo "<pre>";
+//print_r($_POST);
+//echo "</pre>";
+//foreach ($_POST as $key => $value){
+//   if (empty($value)){
+//        echo "<script>history.back();</script>";
+//       exit();
+//    }
+//}
+//
+////require_once "./connect.php";
+//$sql = "INSERT INTO `users` (`city_id`, `firstName`, `lastName`, `birthday`, `email`, `password`) VALUES ('$_POST[city_id]', '$_POST[firstName]', '$_POST[lastName]', '$_POST[birthday]', '$_POST[email]', '$_POST[password]');";
+//$conn->query($sql);
+
+////$stmt = $conn->prepare(query:"INSERT INTO `users` (`email`, `city_id`, `firstName`, `lastName`, `birthday`, `password`, `created_at`) VALUES (?,?,?,?,?,?, current_timestamp());");
+
+////$stmt->bind_param(types: 'sissss', &var1: $_POST["email1"], &..._: $_POST["city_id"], $_POST["firstName"], $_POST["lastName"], $_POST["birthday"], $_POST["password1"]);
+
+////$stmt->execute();
+
+////echo $stmt->affected_rows;
+//printf("%d row inserted.\n", $stmt->affected_rows);
