@@ -19,8 +19,7 @@
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
-
-<?php
+  <?php
     if (isset($_SESSION['error_message'])){
       echo <<< ERROR
         <div class="callout callout-danger">
@@ -40,9 +39,8 @@ ERROR;
       <p class="login-box-msg">Register a new membership</p>
 
       <form action="../../scripts/register_user.php" method="post">
-
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Podaj Imię" name="firstName" autofocus>
+          <input type="text" class="form-control" placeholder="Podaj imię" name="firstName" autofocus>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -51,7 +49,7 @@ ERROR;
         </div>
 
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Podaj Nazwisko" name="lastName" autofocus>
+          <input type="text" class="form-control" placeholder="Podaj nazwisko" name="lastName" autofocus>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -69,7 +67,7 @@ ERROR;
         </div>
 
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Powtórz email" name="confirm_email">
+          <input type="email" class="form-control" placeholder="Potwierdź email" name="confirm_email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -77,7 +75,7 @@ ERROR;
           </div>
         </div>
 
-<div class="input-group mb-3">
+        <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Podaj dodatkowy email" name="additional_email">
           <div class="input-group-append">
             <div class="input-group-text">
@@ -105,7 +103,7 @@ ERROR;
         </div>
 
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Powtórz hasło" name="confirm_pass">
+          <input type="password" class="form-control" placeholder="Potwierdź hasło" name="confirm_pass">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -114,19 +112,19 @@ ERROR;
         </div>
 
         <div class="input-group mb-3">
-          <input type="date" class="form-control" placeholder="dd.mm.rrrr" name="birthday">
+          <input type="date" class="form-control" name="birthday">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-calendar"></span>
+              <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
 
         <div class="input-group mb-3">
           <select class="form-control" name="city_id">
-		  <?php
+          <?php
             require_once "../../scripts/connect.php";
-            $sql = "SELECT * FROM `cities`";
+            $sql = "SELECT * FROM cities";
             $result = $conn->query($sql);
             while($city = $result->fetch_assoc()){
               echo "<option value='$city[id]'>$city[city]</option>";
@@ -135,23 +133,23 @@ ERROR;
           </select>
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-city"></span>
+              <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-7">
+          <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
               <label for="agreeTerms">
-               Zatwierdź regulamin <a href="#"><br>Regulamin</a>
+               I agree to the <a href="#">terms</a>
               </label>
             </div>
           </div>
           <!-- /.col -->
-          <div class="col-5">
-            <button type="submit" class="btn btn-primary btn-block">Rejestracja</button>
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>
@@ -168,7 +166,7 @@ ERROR;
         </a>
       </div>
 
-      <a href="index.php" class="text-center">I already have a membership</a>
+      <a href="./" class="text-center">I already have a membership</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
